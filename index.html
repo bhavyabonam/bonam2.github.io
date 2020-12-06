@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Welcome</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JS files -->
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!--JS files -->
+<script src="js/site.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+	<div class = "content">
+		<div class = "header">
+			<div style="font-weight:bold;float:left;font-size:30px">Chicago Parks</div>
+			<div style="float:right;padding-top: 10px">Bhavya Bonam</div>
+		</div>
+		<div class="ChicagoP">
+			<p>I am using Data Visualization to help neighborhood public in Chicago with locating any park with various facilities to choose from.
+
+
+			Chicago is one of the largest cities in the US for its dashing architecture and beautiful skyline which is filled with skyscrapers such as Willis Tower. The city is also known for its parks where people can ice skate like in Lincoln park or play golf, basketball, tennis and other sports activities. People can also conduct various events in these parks like a yoga event, cultural event and Recreation programs. 
+
+			These parks are located all over Chicago and have a class type ranging from community to nature preserve parks. The below visualization is a map of Chicago neighborhoods layered with map of the parks that can be found in those neighborhoods. I have used different colors to differentiate between each park’s class type. 
+			</p>
+			<img class="image" src="images/AllP.png" alt="IS445-Final Project">	
+			<p>
+				The above dashboard has the spread-out of parks in the city of Chicago. What more, we can also see if we have certain facilities available in these parks with a True for yes and a False for no. In the below visual, for each park we can see if it has a wheelchair access presented as purple for false and red for true. If you have noticed, most of the parks do not have the wheelchair access facility, this shows that we need to increase awareness of the need for more accessibility for handicapped people so that they don’t hold back from enjoying Chicago’s beautiful parks.
+			</p>
+			<img class="image" src="images/Wheelchair.png" alt="IS445-Final Project">
+			<p>
+				We can now see if any of these parks have a zoo. The below image shows that there seems to be one type of park that has a zoo which is a Magnet park and most likely in Lincoln park which is also near a beach. If anyone wants to have a family outing then they can definitely try going here and enjoying the beach as well.
+			</p>
+			<img class="image" src="images/Zoo.png" alt="IS445-Final Project">
+			<p>
+				I am going to show on more facility which these parks might have and that is a golf course. We can see that a few of the parks like Lincoln, Marquette and Columbus have a golf course. All the people who are interested in golf can go to these parks in Chicago.
+			</p>
+			<img class="image" src="images/Golfcourse.png" alt="IS445-Final Project">
+		</div>
+
+		<div style="padding:10px;">I have made a dashboard of all the types of parks near these neighborhoods of Chicago including these facilities which can be used by people for choosing a park they are interested in depending on whether they want to enjoy a nice time in a zoo, playing golf, do yoga, fitness or just enjoying the nature. </div>
+
+		<div class = "dashboard">
+
+			<div style="float:left; padding-right: 10px">Interactive dashboard please choose your option:</div>
+			<div style="float:left" class = "dropdown">
+				<div class="dropdown">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Please Select
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				  	<a class="dropdown-item" onclick="changeSelection('AllP')"> All park </a>
+				    <a class="dropdown-item" onclick="changeSelection('CommunityP')"> Community Park </a>
+					<a class="dropdown-item" onclick="changeSelection('RegionalP')"> Regional Park </a>
+					<a class="dropdown-item" onclick="changeSelection('CitywideP')"> Citywide Park </a>
+					<a class="dropdown-item" onclick="changeSelection('UnimprovedP')"> Unimproved Park </a>
+					<a class="dropdown-item" onclick="changeSelection('MagnetP')"> Magnet Park </a>
+					<a class="dropdown-item" onclick="changeSelection('PassiveP')"> Passive Park </a>
+					<a class="dropdown-item" onclick="changeSelection('MiniP')"> Mini Park </a>
+					<a class="dropdown-item" onclick="changeSelection('NeighborhoodP')"> Neighborhood Park </a>
+					<a class="dropdown-item" onclick="changeSelection('ParkwayP')"> Parkway Park </a>
+					<a class="dropdown-item" onclick="changeSelection('LinearP')"> Linear Park </a>
+					<a class="dropdown-item" onclick="changeSelection('NaturePreserveP')"> Nature Preserve Park </a>
+					<a class="dropdown-item" onclick="changeSelection('ParkwaysP')"> Parkways park </a>
+					<a class="dropdown-item" onclick="changeSelection('Wheelchair')"> Wheechair </a>
+					<a class="dropdown-item" onclick="changeSelection('Zoo')"> Zoo </a>
+					<a class="dropdown-item" onclick="changeSelection('Golfcourse')"> Golfcourse </a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="imageContainer"><img class="image" id="viz" src="images/AllP.png" alt="IS445-Final Project"></div>
+		<div><h3 style='text-align: center;'>Code</h3></div>
+		<div style="padding:10px;text-align: center;">The link to the github with code can be found <a href='https://github.com/bhavyabonam/bonam2.github.io/blob/master/bonam-bhavya-finalproject-part-2.ipynb'>here</a></div>	
+		<div style="padding:10px;">
+			<div><h3 style='text-align: center;'>References</h3></div>
+			<div style='text-align: center;'>
+				<p>Chicago Park District (2019). Parks – <span style='font-style: italic;'>Chicago park district park boundaries(current)</span>. City of Chicago Data Portal<p>
+				<a href='https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Park-Boundaries-curren/ej32-qgdr'>https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Park-Boundaries-curren/ej32-qgdr></a>
+			</div>
+			<div style='text-align: center;'>
+				<p>Choose Chicago (2018). Boundaries – <span style='font-style: italic;'>Neighborhoods. City of Chicago Data Portal</span>. City of Chicago Data Portal<p>
+				<a href='https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9'>hhttps://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
